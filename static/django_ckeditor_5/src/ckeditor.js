@@ -38,13 +38,20 @@ import ListProperties from '@ckeditor/ckeditor5-list/src/listproperties';
 import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
 import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
 import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert';
-import {TableCaption} from "@ckeditor/ckeditor5-table";
+import { TableCaption } from '@ckeditor/ckeditor5-table';
 import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 import Mention from '@ckeditor/ckeditor5-mention/src/mention';
 import { Style } from '@ckeditor/ckeditor5-style';
 import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
 import {LinkImage} from "@ckeditor/ckeditor5-link";
 import {HtmlEmbed} from "@ckeditor/ckeditor5-html-embed";
+import { FullPage } from '@ckeditor/ckeditor5-html-support';
+import { SpecialCharacters } from '@ckeditor/ckeditor5-special-characters';
+import { SpecialCharactersEssentials } from '@ckeditor/ckeditor5-special-characters';
+import { FileUploader } from '@liqd/ckeditor5-file-uploader';
+import { ShowBlocks } from '@ckeditor/ckeditor5-show-blocks';
+import { SelectAll } from '@ckeditor/ckeditor5-select-all';
+import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
 
 export default class ClassicEditor extends ClassicEditorBase {
 }
@@ -94,5 +101,12 @@ ClassicEditor.builtinPlugins = [
     Style,
     HorizontalLine,
     LinkImage,
-    HtmlEmbed
+    HtmlEmbed,
+    FullPage,
+    SpecialCharacters,
+    SpecialCharactersEssentials,
+    FileUploader,
+    ShowBlocks,
+    SelectAll,
+    FindAndReplace
 ];

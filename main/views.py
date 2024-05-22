@@ -11,8 +11,12 @@ class HomeView(TemplateView):
     def get_context_data(self, **kwargs):
         data = super(HomeView, self).get_context_data(**kwargs)
         obj = AboutModel.objects.first()
-        data['name'] = obj.name_en
-        data['description'] = obj.short_description_en
+        if obj:
+            data['name'] = obj.name_en
+            data['description'] = obj.short_description_en
+        else:
+            data['name'] = 'ROBIya'
+            data['description'] = 'I write the program code and I write about the code, so take a look ;)'
         return data
 
 
@@ -22,34 +26,35 @@ class AboutView(TemplateView):
     def get_context_data(self, **kwargs):
         data = super(AboutView, self).get_context_data(**kwargs)
         obj = AboutModel.objects.first()
-        data['ava'] = obj.ava.url
-        data['description'] = obj.long_description_en
+        if obj:
+            data['ava'] = obj.ava.url
+            data['description'] = obj.long_description_en
         return data
 
 
 class BlogListView(ListView):
-    template_name = 'blog_list.html'
+    template_name = 'blog.html'
     model = BlogModel
     context_object_name = 'blogs'
     paginate_by = 9
 
 
 class BlogDetailView(DetailView):
-    template_name = 'blog_detail.html'
+    template_name = 'blog-detail.html'
     model = BlogModel
     context_object_name = 'blog'
     pk_url_kwarg = 'slug'
 
 
 class ProjectListView(ListView):
-    template_name = 'project_list.html'
+    template_name = 'portfolio.html'
     model = ProjectModel
     context_object_name = 'projects'
     paginate_by = 9
 
 
 class ProjectDetailView(DetailView):
-    template_name = 'project_detail.html'
+    template_name = 'portfolio-detail.html'
     model = ProjectModel
     context_object_name = 'project'
     pk_url_kwarg = 'slug'
@@ -64,12 +69,13 @@ class ContactCreateView(CreateView):
     def get_context_data(self, **kwargs):
         data = super(ContactCreateView, self).get_context_data(**kwargs)
         obj = SocialModel.objects.first()
-        data['email'] = obj.email
-        data['phone'] = obj.phone
-        data['github'] = obj.github
-        data['linkedin'] = obj.linkedin
-        data['telegram'] = obj.telegram
-        data['instagram'] = obj.instagram
-        data['twitter'] = obj.twitter
-        data['facebook'] = obj.facebook
+        if obj:
+            data['email'] = obj.email
+            data['phone'] = obj.phone
+            data['github'] = obj.github
+            data['linkedin'] = obj.linkedin
+            data['telegram'] = obj.telegram
+            data['instagram'] = obj.instagram
+            data['twitter'] = obj.twitter
+            data['facebook'] = obj.facebook
         return data

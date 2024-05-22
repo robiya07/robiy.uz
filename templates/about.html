@@ -1,0 +1,69 @@
+{% extends 'parts/base.html' %}
+{% load static %}
+
+{% block title %}
+	About Me
+{% endblock %}
+
+{% block content %}
+	<header class="about" style="margin-top: 4%">
+    <div class="container">
+        <div class="about__content">
+            <img src="{% static 'img/me.svg' %}" alt="" class="about__content-img"/>
+
+            <p class="about__content-text">
+                I am __________, a 22-year-old Software Engineer from Tashkent, Uzbekistan, currently living in Warsaw,
+                Poland.
+                <br/>
+                <br/>
+                I am always contributing to developer events by giving a talk or as a mentor, especially the ones that
+                engage women in tech.
+                As a developer, I really want to see more diversity in the industry.
+                <br/>
+                <br/>
+                Recently I experimented working standing and found it really useful to stay focused and a little
+                healthier. I was able to
+                transform my workstation with the books I read.
+                <br/>
+                <br/>
+                In short, it's me, Azimjon, a friendly programmer from Uzbekistan. You can read my story of becoming a
+                software engineer here.
+            </p>
+
+            <ul class="header__content-social social-hidden about__social">
+                <li>
+                    <a href="" class="header__content-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="header__content-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="header__content-link">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="header__content-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="header__content-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="header__content-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+{% endblock %}
+

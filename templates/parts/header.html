@@ -1,0 +1,33 @@
+{% load static my_tags %}
+<nav class="nav">
+    <div class="container">
+        <div class="nav__content">
+            <a href="index.html" class="nav__content-logo">
+                <img src="{% static 'img/logo.svg' %}" alt=""/>
+            </a>
+
+            <p class="nav__content-text nav-blog">{% active_menu %}</p>
+            {% inactive_menus as menu_list %}
+
+            <ul class="nav__content-list">
+                {% for menu_url, menu_name in menu_list.items %}
+                    <li>
+                        <a href="{% url menu_url %}" class="nav__content-link">{{ menu_name }}</a>
+                    </li>
+                {% endfor %}
+
+                <div class="nav__content-lang">
+                    <button class="lang">Ru</button>
+                    <span></span>
+                    <button class="lang">Uz</button>
+                </div>
+            </ul>
+
+            <div class="overlay" id="overlay"></div>
+
+            <button class="hamburger__menu" id="hamburger-menu">
+                <i class="far fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>

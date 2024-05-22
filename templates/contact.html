@@ -1,0 +1,80 @@
+{% extends 'parts/base.html' %}
+{% load static %}
+{% block title %}
+    Contact Me
+{% endblock %}
+
+{% block content %}
+    <header class="contact">
+        <div class="container">
+            <div class="contact__content">
+
+                <div class="contact__me">
+                    <img class="contact__img none-img" src="{% static "img/conta.png" %}" alt="">
+
+                    <div class="contact__box">
+                        <form action="" class="contact__form">
+                            <input required type="text" class="contact__input username" placeholder="Your Name">
+
+                            <div class="contact__num">
+                                <p class="contact-num">
+                                    +998
+                                </p>
+                                <input required type="text" class="contact__input number" placeholder="(99) 999 99 99">
+                            </div>
+
+                            <input required type="text" class="contact__input message"
+                                   placeholder="Your Message"></input>
+
+                            <button class="contact__button" type="submit">Send</button>
+                        </form>
+                    </div>
+
+                    <img class="contact__img" src="{% static "img/conta.png" %}" alt="">
+
+
+                </div>
+
+                <div class="contact-info">
+                    <a href="mailto:info@robiya.com">info<span>@</span>robiya.com</a>
+                    <a href="tel:+998937882277">+998 <span>(93)</span> 788 22 77</a>
+                </div>
+
+                <ul class="header__content-social social-hidden about__social porfolio__hide">
+                    <li>
+                        <a href="" class="header__content-link contact__social">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="header__content-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="header__content-link">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="header__content-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="header__content-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="header__content-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </header>
+{% endblock %}

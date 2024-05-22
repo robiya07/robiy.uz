@@ -1,0 +1,114 @@
+{% extends 'parts/base.html' %}
+{% load static %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block content %}
+    <header class="portfolio">
+        <div class="container">
+            <div class="portfolio__content">
+                <div class="portfolio__cards">
+                    <a href="portfolio-detail.html" class="portfolio__card">
+                        <div class="porfolio__img">
+                            <img src="{% static "img/bape.svg" %}" alt=""/>
+                        </div>
+                        <p class="portfolio__name"><span>*</span>BAPE</p>
+                    </a>
+
+                    <a href="portfolio-detail.html" class="porfolio__card">
+                        <div class="porfolio__img">
+                            <img src="{% static "img/sony.svg" %}" alt=""/>
+                        </div>
+                        <p class="portfolio__name"><span>*</span>Sony</p>
+                    </a>
+
+                    <a href="portfolio-detail.html" class="porfolio__card">
+                        <div class="porfolio__img">
+                            <img src="{% static "img/uber.svg" %}" alt=""/>
+                        </div>
+                        <p class="portfolio__name"><span>*</span>Uber</p>
+                    </a>
+
+                    <a href="portfolio-detail.html" class="porfolio__card">
+                        <div class="porfolio__img">
+                            <img src="{% static "img/apple.svg" %}" alt=""/>
+                        </div>
+                        <p class="portfolio__name"><span>*</span>Apple</p>
+                    </a>
+
+                    <a href="portfolio-detail.html" class="porfolio__card">
+                        <div class="porfolio__img">
+                            <img src="{% static "img/face.svg" %}" alt=""/>
+                        </div>
+                        <p class="portfolio__name"><span>*</span>THE NORTH FACE</p>
+                    </a>
+
+                    <a href="portfolio-detail.html" class="porfolio__card">
+                        <div class="porfolio__img">
+                            <img src="{% static "img/nike.svg" %}" alt=""/>
+                        </div>
+                        <p class="portfolio__name"><span>*</span>Nike</p>
+                    </a>
+
+                    <a href="portfolio-detail.html" class="porfolio__card">
+                        <div class="porfolio__img">
+                            <img src="{% static "img/off-white.svg" %}" alt=""/>
+                        </div>
+                        <p class="portfolio__name"><span>*</span>Off-White™</p>
+                    </a>
+
+                    <a href="portfolio-detail.html" class="porfolio__card">
+                        <div class="porfolio__img">
+                            <img class="stussy" src="{% static "img/stussy.svg" %}" alt=""/>
+                        </div>
+                        <p class="portfolio__name"><span>*</span>Stussy</p>
+                    </a>
+
+                    <a href="portfolio-detail.html" class="porfolio__card">
+                        <div class="porfolio__img">
+                            <img src="{% static "img/nothing.svg" %}" alt=""/>
+                        </div>
+                        <p class="portfolio__name"><span>*</span>Nothing</p>
+                    </a>
+
+                    <button class="seeMore portfolioSeeMore">See More</button>
+                </div>
+
+                <ul class="header__content-social social-hidden about__social">
+                    <li>
+                        <a href="" class="header__content-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="header__content-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="header__content-link">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="header__content-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="header__content-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="header__content-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+{% endblock %}
